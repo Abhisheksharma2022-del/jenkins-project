@@ -1,5 +1,5 @@
 echo "Welcome to the Jenkins Hell 😒"
-echo "User : $(whoami)
+echo "User : $(whoiam)"
 echo "Hostname : $(hostname)"
-echo "Current Directory : $(pwd)
-echo "Date : $(date)
+echo "Current Directory : $(pwd) "
+echo "Date : $(date)"
