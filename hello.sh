@@ -1,11 +1,11 @@
-echo "Welcome to the Jenkins Hell 😜"
+#!/bin/bash
 
-whoiam
+echo "Welcome to the Jenkins Hello 😄"
 
-echo "User : $(whoiam)"
+echo "User : $(whoami)"
 echo "Hostname : $(hostname)"
 echo "Current Directory : $(pwd)"
 echo "Date : $(date)"
 
 sudo apt update
-sudo apt install tree -y
+sudo apt install -y tree
