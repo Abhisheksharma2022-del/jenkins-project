@@ -6,30 +6,30 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello Jenkins'
+                echo "Hello Jenkins"
             }
         }
 
         stage('Hello-Second') {
             steps {
-                echo 'Hello Jenkins Second'
+                echo "Hello Jenkins Second"
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline Pass'
-            mail to: 'abhi.devops26@gmail.com',
-                 subject: 'Jenkins Pipeline Success',
-                 body: 'The Jenkins pipeline has completed successfully.'
+            echo "Pipeline Pass"
+            mail to: "abhi.devop26@gmail.com",
+                 subject: "SUCCESS : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                 body: "'${env.JOB_NAME}' Build Succeeded.\nCheck Build URL: '${env.BUILD_URL}'"
         }
 
         failure {
-            echo 'Pipeline Fail'
-            mail to: 'abhi.devops26@gmail.com',
-                 subject: 'Jenkins Pipeline Failed',
-                 body: 'The Jenkins pipeline has failed. Please check the console output.'
+            echo "Pipeline Fail"
+            mail to: "abhi.devop26@gmail.com",
+                 subject: "FAIL : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                 body: "'${env.JOB_NAME}' Build Failed.\nCheck Build URL: '${env.BUILD_URL}'"
         }
     }
 }
