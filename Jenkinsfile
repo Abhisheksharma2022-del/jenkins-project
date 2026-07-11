@@ -20,14 +20,14 @@ pipeline {
     post {
         success {
             echo 'Pipeline Pass'
-            mail to: 'abhibhardwaj7271@gmail.com',
+            mail to: 'abhi.devops26@gmail.com',
                  subject: 'Jenkins Pipeline Success',
                  body: 'The Jenkins pipeline has completed successfully.'
         }
 
         failure {
             echo 'Pipeline Fail'
-            mail to: 'abhibhardwaj7271@gmail.com',
+            mail to: 'abhi.devops26@gmail.com',
                  subject: 'Jenkins Pipeline Failed',
                  body: 'The Jenkins pipeline has failed. Please check the console output.'
         }
